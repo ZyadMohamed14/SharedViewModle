@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.sharedviewmodel.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_flavourFragment"
+            app:destination="@id/flavourFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pickUpFragmnet"
+        android:name="com.example.sharedviewmodel.PickupFragment"
+        android:label="PickUpFragmnet" >
+        <action
+            android:id="@+id/action_pickUpFragmnet_to_summeryFragment"
+            app:destination="@id/summeryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flavourFragment"
+        android:name="com.example.sharedviewmodel.FlavorFragment"
+        android:label="FlavourFragment" >
+        <action
+            android:id="@+id/action_flavourFragment_to_pickUpFragmnet"
+            app:destination="@id/pickUpFragmnet" />
+    </fragment>
+    <fragment
+        android:id="@+id/summeryFragment"
+        android:name="com.example.sharedviewmodel.SummaryFragment"
+        android:label="fragment_summery"
+        tools:layout="@layout/fragment_summery" />
+</navigation>
